@@ -14,7 +14,8 @@ const spin = keyframes`
 export const AppContainer = styled.div`
   display: block;
   box-sizing: border-box;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 `;
 
 export const ToggleContainer = styled.div`
@@ -64,7 +65,7 @@ export const SocialLinks = styled.a`
 export const Seperator = styled.div<{ nextColor: string; prevColor: string }>`
   height: 80px;
   overflow: hidden;
-  width: 100vh;
+  width: 100vw;
   background: ${({ prevColor }) => prevColor};
   > svg {
     fill: ${({ nextColor: color }) => color};

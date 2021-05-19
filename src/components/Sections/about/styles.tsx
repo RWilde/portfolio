@@ -63,14 +63,8 @@ export const Skills = styled.div`
 
   > svg {
     margin: 1em;
-    height: 2em;
-    width: 2em;
-    &:hover {
-      height: 3em;
-      width: 3em;
-      stroke: ${({ theme }) => theme.hover};
-      fill: ${({ theme }) => theme.hover};
-    }
+    height: 3em;
+    width: 3em;
   }
 `;
 
@@ -86,6 +80,5 @@ export const WaveBackground = styled.div`
     bottom: 0;
     position: absolute;
     left: 0;
-    width: 100vh;
   }
 `;

@@ -20,7 +20,6 @@ import {
   ToggleFab,
 } from "./styles";
 import { CSSTransition } from "react-transition-group";
-import Emoji from "./components/helpers/Emoji";
 
 function App() {
   const { theme, toggleTheme, isDarkTheme } = useDarkMode();

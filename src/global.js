@@ -10,8 +10,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     justify-content: center;
-    width: 100vh;
-    overflow: hidden;
     align-items: center;
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};

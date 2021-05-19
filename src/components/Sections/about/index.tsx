@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   AboutContainer,
   AboutMe,
@@ -12,7 +12,6 @@ import {
   Container,
 } from "./styles";
 import {
-  FaAndroid,
   FaCss3Alt,
   FaDatabase,
   FaGitSquare,
@@ -21,13 +20,9 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-import { Seperator, WaveContainer } from "../../../styles";
-import useDarkMode from "../../../hooks/useDarkMode";
-import { HeaderWave, Wave } from "../..";
+import { HeaderWave } from "../..";
 
 const About = () => {
-  const { theme } = useDarkMode();
-
   return (
     <Container>
       <AboutContainer data-testid={"about"}>

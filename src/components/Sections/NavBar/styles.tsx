@@ -1,4 +1,3 @@
-import { Fab } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 
 export const NavBarContainer = styled.header<{
@@ -86,7 +85,6 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   flex-direction: column;
   justify-content: center;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  height: 100vh;
   text-align: left;
   padding: 2rem;
   position: fixed;
