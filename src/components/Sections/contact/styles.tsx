@@ -1,38 +1,33 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-  width: 700px;
+  width: 50vh;
   height: 500px;
   display: flex;
   border-radius: 20px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  flex-direction: column;
 
-  border: 1px solid ${({ theme }) => theme.border};
-  background-color: ${({ theme }) => theme.simpleBackground};
-  backdrop-filter: blur(20px);
-
-  // enter from
-  &.fade-enter {
-    opacity: 0;
-  }
-
-  // enter to
-  &.fade-enter-active {
-    opacity: 1;
-  }
-
-  // exit from
-  &.fade-exit {
-    opacity: 1;
-  }
-
-  // exit to
-  &.fade-exit-active {
-    opacity: 0;
-  }
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
 `;
 
-export const Close = styled.div``;
+export const Close = styled.div`
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+`;
+
+export const FindMeText = styled.div``;
+
+export const FindMeLinks = styled.div`
+  margin-bottom: 0.5em;
+`;

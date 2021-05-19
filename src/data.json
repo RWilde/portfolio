@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "responsibilities": [
+        "Developing new features requested by the business, on both the Java application and React application, including enhanced product  offerings and adherence to financial regulations.",
+        "Integrating the web solution with in-house REST APIs and integrating Websockets to allow for live trade and order updates,including developing a notification centre.",
+        "Modernising the Java application, for example migrating the user configuration stored on the client’s local machine, and rewriting the 15+ year old code to clean, SOLID, fully tested code, in order to save the configuration to a hosted repo.",
+        " Developing technical documentation such as user guides, release notes, testing evidence and taking part actively in knowledge shares.",
+        "Creating unit tests on different aspects of the system - utilising both JUnit on the Java application and Jest/React Testing Library on the web based solution, with the aim of improving test coverage from &lt 50% to above 80% which was achieved.",
+        "Project releases were managed using an Agile development method, with daily scrums and regular releases aligned to sprints, tracked using the Atlassian Jira tool."
+      ],
+      "company": "First Derivative Plc",
+      "title": "Full Stack Developer",
+      "time": "Feb’19 – Present",
+      "location": "Frankfurt",
+      "about": "Working in Frankfurt, Germany supporting and modernizing a java based eFX trading platform used for both internal and external clients of Commerzbank. Additionally involved in the development of a react based web solution to eventually replace the trading platform.",
+      "skills": ["Java", "React", "CSS", "Agile"]
+    },
+    {
+      "responsibilities": [
+        "React, Java and SQL development for implementation of two new collection services on the website.",
+        "Major back-end enhancement with additional JavaScript development and innovation of front and backend features for the redesign of the Customer Service section of the website.",
+        "Implementation of enhanced Google Analytics data to improve customer insights.",
+        "Various development changes via CRC small change stream (Marketing, Customer Service, Finance, Legal).",
+        "Canvased and implemented improved process flows within ATG Development team",
+        "A period on production support, giving more exposure to production systems and issues",
+        "Graduate software developer and progressed to a software developer within the year.",
+        "Proposal of innovations for bug fixes in relation to production support challenges."
+      ],
+      "company": "Chain Reaction Cycles",
+      "title": "Java Developer",
+      "time": "Jun’17- Jan’19",
+      "location": "Belfast",
+      "about": "Experience with ATG eCommerce technology – an Oracle product used for large scale commerce websites Back end development based on Java with an Oracle database Front-end development using HTML, CSS,React, Node.js, JavaScript and templating",
+      "skills": ["Java", "SQL", "JavaScript", "HTML"]
+    },
+    {
+      "responsibilities": [
+        "Full SDLC experience in relation to web application (From requirements collected to finished implementation, which was then applied to my final year project).",
+        "Experience managing server load and creation of scheduled jobs.",
+        "Offered permanent role within Chain Reaction Cycles following placement year."
+      ],
+      "company": "Chain Reaction Cycles",
+      "title": "Placement Java Developer",
+      "time": "Jun’15 – Sep’16",
+      "location": "Belfast",
+      "about": "Use of Java, Rabbit MQ & bootstrap HTML for creation of web application to monitor scheduled jobs running on the website to provide data insight",
+      "skills": ["Java", "Rabbit MQ", "Redis", "SQL"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "portfolio",
+      "technologies": ["React", "Styled Components", "Node Mailer"],
+      "about": "This!"
+    }
+  ]
+}

@@ -8,8 +8,7 @@ export const FooterContainer = styled.footer`
   height: 120px;
   width: 100%;
   padding: 2.5rem;
-  background: ${({ theme }) => theme.simpleBackground};
-  position: absolute;
+  background: ${({ theme }) => theme.footer};
   bottom: 0;
   left: 0;
 `;

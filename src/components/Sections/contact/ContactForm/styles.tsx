@@ -42,59 +42,38 @@ export const FormGroup = styled.div`
   position: relative;
   margin-top: 1em;
   flex-direction: column;
+
+  > input,
+  > textarea,
+  > button {
+    outline: none;
+    border: none;
+    padding: 0.5em 1.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin: 5px;
+    width: 100%;
+  }
 `;
 
 export const StyledInput = styled.input`
-  outline: none;
-  border: none;
-  margin: 5px;
-  padding-left: 1.5em;
-  padding-right: 3em;
-  border-radius: 17px;
-  border: 1px solid ${({ theme }) => theme.border};
-  font-size: 16px;
   color: ${({ theme }) => theme.text};
-  background: transparent;
   height: 100%;
   &::placeholder {
     color: ${({ theme }) => theme.text};
   }
 `;
 
-export const Message = styled.textarea`
-  outline: none;
+export const StyledTextArea = styled.textarea`
   color: ${({ theme }) => theme.text};
-  background: transparent;
-  width: 100%;
   min-height: 100px;
   resize: none;
-  padding-left: 1.5em;
-  padding-right: 3em;
-  border-radius: 17px;
-  border: 1px solid ${({ theme }) => theme.border};
-  font-size: 16px;
   height: 100%;
-  margib: 5px;
   &::placeholder {
     color: ${({ theme }) => theme.text};
   }
 `;
 
-export const SendButton = styled.button`
-  width: 50%;
-  margin: auto;
-  margin-right: 0;
-`;
-
-export const StyledButton = styled.button`
-  display: block;
-  background-color: #f7797d;
-  color: #fff;
-  font-size: 0.9rem;
-  border: 0;
-  border-radius: 5px;
-  height: 40px;
-  padding: 0 20px;
-  cursor: pointer;
-  box-sizing: border-box;
-`;

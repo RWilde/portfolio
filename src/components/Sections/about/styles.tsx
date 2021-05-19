@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const typing = keyframes`
   from {
@@ -19,12 +19,11 @@ const blinking = keyframes`
   }
 `;
 
+export const Container = styled.div``;
+
 export const AboutContainer = styled.div`
-  min-height: calc(100vh - (1rem + 50px));
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: 10vh auto;
+  height: 100vh;
+  background: ${({ theme }) => theme.about};
 `;
 
 export const Name = styled.div`
@@ -33,8 +32,10 @@ export const Name = styled.div`
 `;
 
 export const Header = styled.div`
-  margin-top: calc(10vh);
+  width: fit-content;
+`;
 
+export const Typing = styled.div`
   overflow: hidden;
   border-right: 0.15em solid orange;
   white-space: nowrap;
@@ -64,5 +65,27 @@ export const Skills = styled.div`
     margin: 1em;
     height: 2em;
     width: 2em;
+    &:hover {
+      height: 3em;
+      width: 3em;
+      stroke: ${({ theme }) => theme.hover};
+      fill: ${({ theme }) => theme.hover};
+    }
+  }
+`;
+
+export const Contents = styled.div`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+`;
+
+export const WaveBackground = styled.div`
+  > svg {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    width: 100vh;
   }
 `;

@@ -1,8 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import { ProjectsContainer } from "./styles";
+import json from "../../../data.json";
+import ProjectSection from "./ProjectSection";
+import { Project } from "../../helpers/types";
+import { Header } from "../experience/styles";
 
-export default class Projects extends Component {
-  render() {
-    return <ProjectsContainer data-testid={"projects"}></ProjectsContainer>;
-  }
-}
+const Projects = () => {
+  const data = json.projects;
+
+  return (
+    <ProjectsContainer data-testid={"experience"}>
+      <Header>Projects</Header>
+      {data &&
+        data.length > 0 &&
+        data.map((item) => <ProjectSection {...(item as Project)} />)}
+    </ProjectsContainer>
+  );
+};
+
+export default Projects;

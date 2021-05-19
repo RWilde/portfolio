@@ -1,3 +1,5 @@
+// 
+
 export * from "./Sections//NavBar";
 export { default as NavBar } from "./Sections//NavBar"; // import AboutContact ...
 
@@ -15,3 +17,7 @@ export { default as Footer } from "./Sections//footer"; // import AboutContact .
 
 export * from "./Sections/projects";
 export { default as Projects } from "./Sections/projects"; // import AboutContact ...
+
+export { ReactComponent as Wave } from "../assets/wave.svg";
+export { ReactComponent as HeaderWave } from "../assets/headerWave.svg";
+

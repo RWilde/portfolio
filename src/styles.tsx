@@ -14,7 +14,7 @@ const spin = keyframes`
 export const AppContainer = styled.div`
   display: block;
   box-sizing: border-box;
-  height: 100%;
+  overflow: hidden;
 `;
 
 export const ToggleContainer = styled.div`
@@ -28,14 +28,13 @@ export const ToggleContainer = styled.div`
 `;
 
 export const ToggleFab = styled(Fab)<{ clicked: boolean }>`
-  background: ${({ theme }) => theme.simpleBackground};
+  background-color: transparent !important;
+  background: none;
+  box-shadow: none;
   > span {
     > svg {
-      ${(props) =>
-        props.clicked &&
-        css`
-          animation: ${spin} 3.5s;
-        `}
+      animation: ${spin} 3.5s;
+
       fill: ${({ theme }) => theme.text};
     }
   }
@@ -45,7 +44,7 @@ export const Main = styled.div<{ blurBackground: boolean }>`
   height: 100%;
   width: 100%;
 
-  ${(props) => props.blurBackground && "filter: blur(2px)"};
+  // ${(props) => props.blurBackground && "filter: blur(2px)"};
 `;
 
 export const SocialLinks = styled.a`
@@ -59,5 +58,20 @@ export const SocialLinks = styled.a`
 
   > svg:hover {
     fill: ${({ theme }) => theme.hoverBorder};
+  }
+`;
+
+export const Seperator = styled.div<{ nextColor: string; prevColor: string }>`
+  height: 80px;
+  overflow: hidden;
+  width: 100vh;
+  background: ${({ prevColor }) => prevColor};
+  > svg {
+    fill: ${({ nextColor: color }) => color};
+  }
+`;
+
+export const WaveContainer = styled.div`
+  > svg {
   }
 `;

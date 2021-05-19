@@ -7,7 +7,7 @@ export const NavButtonsContainer = styled.div`
   padding: 0 10px;
 `;
 
-export const ButtonItem = styled.button`
+export const StyledButton = styled.button`
   height: 100%;
   padding: 0.5em 1.1em;
   font-weight: 500;
@@ -15,13 +15,7 @@ export const ButtonItem = styled.button`
   align-items: center;
   justify-content: center;
   display: flex;
-  border: 2px solid ${({ theme }) => theme.border};
   transition: all 220ms ease-in-out;
-  border-radius: 10px;
-  background: transparent;
-  &:hover {
-    border: 2px solid ${({ theme }) => theme.hoverBorder};
-  }
 `;
 
 export const ButtonTag = styled.div`

@@ -6,13 +6,21 @@ import {
   Projects,
   Contact,
   Footer,
+  Wave,
 } from "./components";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import useDarkMode from "./hooks/useDarkMode";
 import { RiSunFoggyFill, RiSunLine } from "react-icons/ri";
-import { AppContainer, Main, ToggleContainer, ToggleFab } from "./styles";
+import {
+  AppContainer,
+  Main,
+  Seperator,
+  ToggleContainer,
+  ToggleFab,
+} from "./styles";
 import { CSSTransition } from "react-transition-group";
+import Emoji from "./components/helpers/Emoji";
 
 function App() {
   const { theme, toggleTheme, isDarkTheme } = useDarkMode();
@@ -25,10 +33,19 @@ function App() {
           <NavBar
             setDisplayContactMe={() => setDisplayContactMe(!isDisplayContactMe)}
           />
-          <About></About>
-          {/* <Experience></Experience> */}
-          <Projects></Projects>
-          <Footer></Footer>
+          <About />
+          <Seperator prevColor={theme.about} nextColor={theme.experience}>
+            <Wave />
+          </Seperator>
+          <Experience />
+          <Seperator prevColor={theme.experience} nextColor={theme.projects}>
+            <Wave />
+          </Seperator>
+          <Projects />
+          <Seperator prevColor={theme.projects} nextColor={theme.footer}>
+            <Wave />
+          </Seperator>
+          <Footer />
         </Main>
         <CSSTransition
           in={isDisplayContactMe}

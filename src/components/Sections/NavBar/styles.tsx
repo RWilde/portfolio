@@ -12,12 +12,17 @@ export const MenuContainer = styled.nav<{
 }>`
   width: 100%;
   box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
-  position: absolute;
-  top: 0;
+  position: fixed;
+  right: 0;
   left: 0;
+  top: 0;
   display: ${(props) => (props.showBurger && !props.open ? "none" : "flex")};
   align-items: center;
   padding: 0.5rem 1rem;
+  backdrop-filter: blur(5px);
+  animation: ${(props) => (props.showBurger && !props.open ? fadeOut : fadeIn)}
+    0.5s linear;
+  z-index: 10;
 `;
 
 export const LeftSection = styled.div`
@@ -51,52 +56,95 @@ export const LinksContainer = styled.ul`
 
 export const MenuFab = styled.div`
   margin: 0;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   padding: 10px;
   left: auto;
-  position: absolute;
+  position: fixed;
 `;
 
-export const StyledBurger = styled.div<{ open: boolean; toggle: boolean }>`
-  width: 100%;
-  // width: 2rem;
-  // height: 2rem;
-  // position: fixed;
-  // top: 15px;
-  // right: 20px;
-  // z-index: 20;
-  // display: flex;
-  // @media (max-width: 768px) {
-  //   display: flex;
-  //   justify-content: space-around;
-  //   flex-flow: column nowrap;
-  // }
+const fadeIn = keyframes`
+  0% {
+    transform: translateY(-100%)
+  }
+  to {
+    transform: translateY(0)
+  }
 `;
 
-const appear = keyframes`{
+const fadeOut = keyframes`
   0% {
-    opacity: 0;
+    transform: translateY(0)
   }
-  100% {
-    opacity: 1;
+  to {
+    transform: translateY(100%)
   }
-}`;
+`;
 
-const slideIn = `{
-  0% {
-    transform: translateX(-2%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}`;
+export const StyledMenu = styled.nav<{ open: boolean }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  height: 100vh;
+  text-align: left;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+  cursor: auto;
 
-const shrink = `{
-  0% {
-    width: 95%;
+  @media (max-width: 575px) {
+    width: 100%;
   }
-  100% {
-    width: 90%;
+
+  > a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    color: ${({ theme }) => theme.text};
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
-}`;
+
+  > a:hover {
+    color: ${({ theme }) => theme.hover};
+  }
+
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+`;
+
+export const StyledBurger = styled.div<{ open: boolean }>`
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 10;
+
+  > svg {
+    height: 2em;
+    width: 2em;
+  }
+  > svg:hover {
+    fill: ${({ theme }) => theme.hoverBorder};
+  }
+`;
+
+export const ButtonSection = styled.div`
+  display: flex;
+  flex-direction: row;
+`;

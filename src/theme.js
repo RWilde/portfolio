@@ -10,13 +10,24 @@ export const almond = "#eae0d5ff";
 export const lightBrown = "#c6ac8fff";
 export const darkBrown = "#5e503fff";
 
+//sections
+export const aboutLight = "#F9D4BB";
+export const experienceLight = "#F0E2A3";
+export const projectsLight = "#E2D58B";
+export const footerLight = "#C1D37F";
+
+export const aboutDark = "#0D1321";
+export const experienceDark = "#121D2B";
+export const projectsDark = "#17223A";
+export const footerDark = "#1E3048";
+
 export const lightTheme = {
   body: "#E2E2E2",
   text: black,
   textHeader: green,
   toggleBorder: "#FFF",
   simpleBackground: almond,
-  background: almond,
+  background: white,
 
   // background:
   //   "radial-gradient(circle, rgba(242,132,130,1) 23%, rgba(245,202,195,1) 100%)",
@@ -24,7 +35,12 @@ export const lightTheme = {
   hoverBorder: green,
   simpleBackground: white,
   button: green,
-  buttonHover: almond,
+  buttonHover: darkPink,
+
+  about: white,
+  experience: experienceLight,
+  projects: projectsLight,
+  footer: footerLight,
 };
 
 export const darkTheme = {
@@ -42,4 +58,9 @@ export const darkTheme = {
   simpleBackground: darkGrey,
   button: darkBrown,
   buttonHover: lightBrown,
+
+  about: aboutDark,
+  experience: experienceDark,
+  projects: projectsDark,
+  footer: footerDark,
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonItem, ButtonTag, NavButtonsContainer } from "./styles";
+import { StyledButton, ButtonTag, NavButtonsContainer } from "./styles";
 
 type NavButtonProps = {
   title: string;
@@ -9,9 +9,9 @@ type NavButtonProps = {
 const NavButton = ({ title, onClick }: NavButtonProps) => {
   return (
     <NavButtonsContainer>
-      <ButtonItem onClick={onClick}>
+      <StyledButton onClick={onClick}>
         <ButtonTag>{title}</ButtonTag>
-      </ButtonItem>
+      </StyledButton>
     </NavButtonsContainer>
   );
 };

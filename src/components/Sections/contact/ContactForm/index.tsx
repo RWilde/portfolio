@@ -5,9 +5,7 @@ import {
   Header,
   InnerContainer,
   SubHeader,
-  SendButton,
-  Message,
-  StyledButton,
+  StyledTextArea,
   StyledInput,
 } from "./styles";
 
@@ -46,8 +44,8 @@ const ContactForm = () => {
         <FormGroup>
           <StyledInput type="text" placeholder="Name" />
           <StyledInput type="email" placeholder="Email" />
-          <Message />
-          <SendButton type="submit">Send</SendButton>
+          <StyledTextArea />
+          <button type="submit">Send</button>
         </FormGroup>
       </InnerContainer>
     </DetailsContainer>
