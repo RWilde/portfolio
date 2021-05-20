@@ -16,6 +16,7 @@ export const AppContainer = styled.div`
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 `;
 
 export const ToggleContainer = styled.div`

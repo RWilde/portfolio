@@ -51,7 +51,7 @@
   "projects": [
     {
       "name": "portfolio",
-      "technologies": ["React", "Styled Components", "Node Mailer"],
+      "technologies": ["React", "Styled Components", "Node Mailer", "Express"],
       "about": "This!"
     }
   ]

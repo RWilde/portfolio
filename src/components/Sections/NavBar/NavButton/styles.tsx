@@ -18,7 +18,7 @@ export const StyledButton = styled.button`
   transition: all 220ms ease-in-out;
 `;
 
-export const ButtonTag = styled.div`
+export const ButtonTag = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.text};
   font-size: inherit;

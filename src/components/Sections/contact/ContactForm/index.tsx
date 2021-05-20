@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { ChangeEventHandler, useState } from "react";
+import { RiContactsBookLine } from "react-icons/ri";
 import {
   DetailsContainer,
   FormGroup,
@@ -13,28 +15,48 @@ const initalState = {
   name: "",
   email: "",
   message: "",
-  gender: "",
 };
 
 const ContactForm = () => {
   const [state, setState] = useState(initalState);
   const [error, setError] = useState(false);
-  // const handleSubmit = (e: Event) => {
-  //   e.preventDefault();
-  //   for (let key in state) {
-  //     if (state[key] === '') {
-  //       setError(`You must provide the ${key}`)
-  //       return
-  //     }
-  //   }
-  //   setError('');
-  // }
-  //   const handleInput = e => {
-  //   const inputName = e.currentTarget.name;
-  //   const value = e.currentTarget.value;
 
-  //   setState(prev => ({ ...prev, [inputName]: value }));
-  // };
+  const submitEmail = (e: Event) => {
+    console.log(state);
+    e.preventDefault();
+    axios({
+      method: "POST",
+      url: "/send",
+      data: state,
+    }).then((response) => {
+      if (response.data.status === "success") {
+        alert("Message Sent.");
+        resetForm();
+      } else if (response.data.status === "fail") {
+        alert("Message failed to send.");
+      }
+    });
+  };
+
+  const resetForm = () => {
+    setState({ name: "", email: "", message: "" });
+  };
+
+  const onNameChange = (event: { target: { value: any } }) => {
+    const newState = state;
+    newState.name = event.target.value;
+    setState(newState);
+  };
+  const onEmailChange = (event: { target: { value: any } }) => {
+    const newState = state;
+    newState.email = event.target.value;
+    setState(newState);
+  };
+  const onMsgChange = (event: { target: { value: any } }) => {
+    const newState = state;
+    newState.message = event.target.value;
+    setState(newState);
+  };
 
   return (
     <DetailsContainer>
@@ -42,10 +64,16 @@ const ContactForm = () => {
         <Header>Contact me</Header>
         <SubHeader>I would love to hear from you!</SubHeader>
         <FormGroup>
-          <StyledInput type="text" placeholder="Name" />
-          <StyledInput type="email" placeholder="Email" />
-          <StyledTextArea />
-          <button type="submit">Send</button>
+          <StyledInput type="text" placeholder="Name" onChange={onNameChange} />
+          <StyledInput
+            type="email"
+            placeholder="Email"
+            onChange={onEmailChange}
+          />
+          <StyledTextArea onChange={onMsgChange} />
+          <button type="submit" onClick={(e: any) => submitEmail(e)}>
+            Send
+          </button>
         </FormGroup>
       </InnerContainer>
     </DetailsContainer>

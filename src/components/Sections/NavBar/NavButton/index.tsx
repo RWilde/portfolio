@@ -3,14 +3,17 @@ import { StyledButton, ButtonTag, NavButtonsContainer } from "./styles";
 
 type NavButtonProps = {
   title: string;
-  onClick: () => void;
+  onClick?: () => void;
+  href?: string;
 };
 
-const NavButton = ({ title, onClick }: NavButtonProps) => {
+const NavButton = ({ title, onClick, href }: NavButtonProps) => {
   return (
     <NavButtonsContainer>
       <StyledButton onClick={onClick}>
-        <ButtonTag>{title}</ButtonTag>
+        <ButtonTag href={href} download>
+          {title}
+        </ButtonTag>
       </StyledButton>
     </NavButtonsContainer>
   );
