@@ -28,9 +28,9 @@ const About = () => {
       <AboutContainer id="about" data-testid={"about"}>
         <Contents>
           <Header>
-            <Typing>
-              Hello World, I'm <Name>Rebecca Wilde</Name>
-            </Typing>
+            {/* <Typing> */}
+            Hello World, I'm <Name>Rebecca Wilde</Name>
+            {/* </Typing> */}
           </Header>
           <SubHeader>
             Full Stack developer with experience in the full lifecycle of

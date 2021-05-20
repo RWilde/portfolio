@@ -91,6 +91,7 @@ export const Skills = styled.div`
   flex: 1;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export const SectionDivider = styled.h2`

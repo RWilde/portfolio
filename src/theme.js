@@ -41,6 +41,7 @@ export const lightTheme = {
   experience: experienceLight,
   projects: projectsLight,
   footer: footerLight,
+  chat: darkPink,
 };
 
 export const darkTheme = {
@@ -63,4 +64,5 @@ export const darkTheme = {
   experience: experienceDark,
   projects: projectsDark,
   footer: footerDark,
+  chat: lightBrown,
 };

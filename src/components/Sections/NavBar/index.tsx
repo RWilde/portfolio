@@ -44,10 +44,6 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
   });
 
   useEffect(() => {
-    setShowBurger(isSmallWindow);
-  }, [isSmallWindow]);
-
-  useEffect(() => {
     if (!showBurger) {
       setOpen(false);
     }
@@ -91,13 +87,13 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
 
   return (
     <div>
-      {showBurger && (
+      {(showBurger || isSmallWindow) && (
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <TiThMenu />
         </StyledBurger>
       )}
 
-      {showBurger ? menu() : headerBar()}
+      {showBurger || isSmallWindow ? menu() : headerBar()}
     </div>
   );
 };

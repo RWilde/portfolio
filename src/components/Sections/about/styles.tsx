@@ -48,10 +48,12 @@ export const Typing = styled.div`
 export const SubHeader = styled.div`
   display: flex;
   text-align: left;
+  flex-wrap: wrap;
 `;
 
 export const AboutMe = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const Skills = styled.div`
@@ -60,6 +62,7 @@ export const Skills = styled.div`
   justify-content: center;
   padding: 1em;
   flex-direction: row;
+  flex-wrap: wrap;
 
   > svg {
     margin: 1em;
@@ -73,6 +76,7 @@ export const Contents = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  flex-wrap: wrap;
 `;
 
 export const WaveBackground = styled.div`
