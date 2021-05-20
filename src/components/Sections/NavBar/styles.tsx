@@ -17,11 +17,12 @@ export const MenuContainer = styled.nav<{
   top: 0;
   display: ${(props) => (props.showBurger && !props.open ? "none" : "flex")};
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   backdrop-filter: blur(5px);
   animation: ${(props) => (props.showBurger && !props.open ? fadeOut : fadeIn)}
     0.5s linear;
   z-index: 10;
+  height: 60px;
 `;
 
 export const LeftSection = styled.div`
@@ -108,6 +109,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
     text-decoration: none;
     transition: color 0.3s linear;
     color: ${({ theme }) => theme.text};
+    cursor: pointer;
     @media (max-width: 576px) {
       font-size: 1.5rem;
       text-align: center;

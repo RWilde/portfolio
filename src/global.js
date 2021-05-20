@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
   *, *::after, *::before {
     box-sizing: border-box;
@@ -50,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
   textarea,
   button {
     outline: none;
-    border: none;
+    border: 1px solid transparent;
     padding: 0.5em 1.5em;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -63,8 +64,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.hoverBorder};
-  }  
+    &:hover {
+      border: 1px solid ${({ theme }) => theme.hoverBorder};
+    }  
   }
 `;

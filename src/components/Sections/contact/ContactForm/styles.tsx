@@ -47,7 +47,7 @@ export const FormGroup = styled.div`
   > textarea,
   > button {
     outline: none;
-    border: none;
+    border: 1px solid transparent;
     padding: 0.5em 1.5em;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
