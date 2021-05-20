@@ -88,6 +88,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   text-align: left;
   padding: 2rem;
   position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;

@@ -59,7 +59,7 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         <LeftSection>Rebecca Wilde</LeftSection>
         <MiddleSection>
           <LinksContainer>
-            <NavLink title="About" linkTag="about" />
+            <NavLink title="About" linkTag="#about" />
             <NavLink title="Experience" linkTag="#exp" />
             <NavLink title="Projects" linkTag="#projects" />
           </LinksContainer>
@@ -80,10 +80,10 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
             <RiCloseFill />
           </SocialLinks>
         </Close>
-        <a href="/">About</a>
-        <a href="/">Experience</a>
-        <a href="/">Projects</a>
-        <a href="/">Contact me</a>
+        <a href="#about">About</a>
+        <a href="#exp">Experience</a>
+        <a href="#projects">Projects</a>
+        <a onClick={setDisplayContactMe}>Contact me</a>
         <a href="/">Download CV</a>
       </StyledMenu>
     );

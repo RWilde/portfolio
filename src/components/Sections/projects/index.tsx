@@ -9,7 +9,7 @@ const Projects = () => {
   const data = json.projects;
 
   return (
-    <ProjectsContainer data-testid={"experience"}>
+    <ProjectsContainer id="projects" data-testid={"proects"}>
       <Header>Projects</Header>
       {data &&
         data.length > 0 &&

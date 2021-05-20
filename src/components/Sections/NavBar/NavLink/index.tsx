@@ -9,7 +9,7 @@ type NavLinkProps = {
 const NavLink = ({ title, linkTag }: NavLinkProps) => {
   return (
     <LinkItem>
-      <LinkTag>{title}</LinkTag>
+      <LinkTag href={linkTag}>{title}</LinkTag>
     </LinkItem>
   );
 };

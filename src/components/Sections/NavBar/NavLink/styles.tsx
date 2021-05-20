@@ -20,7 +20,7 @@ export const LinkItem = styled.li`
   }
 `;
 
-export const LinkTag = styled.div`
+export const LinkTag = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.text};
   font-size: inherit;

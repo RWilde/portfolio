@@ -7,7 +7,7 @@ const Experience = () => {
   const data = json.jobs;
 
   return (
-    <ExpContainer data-testid={"experience"}>
+    <ExpContainer id="exp" data-testid={"experience"}>
       <Header>Experience</Header>
       {data &&
         data.length > 0 &&

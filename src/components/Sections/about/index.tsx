@@ -25,7 +25,7 @@ import { HeaderWave } from "../..";
 const About = () => {
   return (
     <Container>
-      <AboutContainer data-testid={"about"}>
+      <AboutContainer id="about" data-testid={"about"}>
         <Contents>
           <Header>
             <Typing>
