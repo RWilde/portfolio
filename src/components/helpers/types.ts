@@ -12,4 +12,5 @@ export type Project = {
   technologies: [];
   name: string;
   about: string;
+  responsibilities: [];
 };

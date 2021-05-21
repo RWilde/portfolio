@@ -61,14 +61,14 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         <LeftSection>Rebecca Wilde</LeftSection>
         <MiddleSection>
           <LinksContainer>
-            {link("About", "#about")}
-            {link("Experience", "#exp")}
-            {link("Projects", "#projects")}
+            <NavLink title="About" linkTag="#about" />
+            <NavLink title="Experience" linkTag="#exp" />
+            <NavLink title="Projects" linkTag="#projects" />
           </LinksContainer>
         </MiddleSection>
         <RightSection>
           <NavButton title="Contact Me" onClick={setDisplayContactMe} />
-          <NavButton title="Download CV" href="./RebeccaWilde-CV.pdf" />
+          <NavButton title="Download CV" href="/RebeccaWilde-CV.pdf" />
         </RightSection>
       </MenuContainer>
     );
@@ -86,17 +86,15 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         <a href="#exp">Experience</a>
         <a href="#projects">Projects</a>
         <a onClick={openContactMe}>Contact me</a>
-        <a href="./RebeccaWilde-CV.pdf" download="RebeccaWilde-CV.pdf">
-          Download CV
-        </a>
+        <a href="/RebeccaWilde-CV.pdf">Download CV</a>
       </StyledMenu>
     );
   };
 
-  const link = (title: string, linkTag: string) => {
+  const NavLink = (props: { linkTag: string; title: string }) => {
     return (
       <LinkItem>
-        <LinkTag href={linkTag}>{title}</LinkTag>
+        <LinkTag href={props.linkTag}>{props.title}</LinkTag>
       </LinkItem>
     );
   };

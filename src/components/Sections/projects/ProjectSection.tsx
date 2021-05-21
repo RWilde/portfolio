@@ -6,34 +6,35 @@ import {
   Section,
   SectionDivider,
   SectionHeader,
+  SectionInfo,
   Skills,
   Text,
 } from "../experience/styles";
 
-const ProjectSection = (job: Project) => {
+const ProjectSection = (project: Project) => {
   const [open, setIsOpen] = useState(false);
 
   return (
     <Section open={open}>
       <SectionHeader>
-        <SectionDivider>{job.name}</SectionDivider>
+        <SectionDivider>{project.name}</SectionDivider>
         <Skills>
-          {job.technologies &&
-            job.technologies.length > 0 &&
-            job.technologies.map((item) => <CheckRow>{item}</CheckRow>)}
+          {project.technologies &&
+            project.technologies.length > 0 &&
+            project.technologies.map((item) => <CheckRow>{item}</CheckRow>)}
         </Skills>
-        <Text>{job.about}</Text>
+        <Text>{project.about}</Text>
         <More onClick={() => setIsOpen(!open)}>
           {open ? "Heard enough?" : "Want to hear more?"}
         </More>
       </SectionHeader>
-      {/* <SectionInfo open={open}>
+      <SectionInfo open={open}>
         <ul>
-          {job.responsibilities &&
-            job.responsibilities.length > 0 &&
-            job.responsibilities.map((item) => <li>{item}</li>)}
+          {project.responsibilities &&
+            project.responsibilities.length > 0 &&
+            project.responsibilities.map((item) => <li>{item}</li>)}
         </ul>
-      </SectionInfo> */}
+      </SectionInfo>
     </Section>
   );
 };

@@ -52,7 +52,13 @@
     {
       "name": "portfolio",
       "technologies": ["React", "Styled Components", "Node Mailer", "Express"],
-      "about": "This!"
+      "about": "This!",
+      "responsibilities": [
+        "Full responsive website built using React.",
+        "Utilised styled components to make the styles seamless and cohesive.",
+        "Minor test implementation.",
+        "Using nodemailer and express to allow for contacting me."
+      ]
     }
   ]
 }

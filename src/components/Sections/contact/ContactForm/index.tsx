@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { ChangeEventHandler, useState } from "react";
-import { RiContactsBookLine } from "react-icons/ri";
 import {
   DetailsContainer,
   FormGroup,

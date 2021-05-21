@@ -49,6 +49,20 @@ export const SectionInfo = styled.div<{ open: boolean }>`
   backdrop-filter: blur(40px);
   border-radius: 20px;
   margin: 5px;
+  height: fit-content;
+  visibility: ${(props) => (props.open ? "visible" : "hidden")};
+  animation: ${(props) => (props.open ? slideInTop : slideOutTop)} 1s ease-in;
+  opacity: 1;
+  // transition: visibility 1s linear;
+  transition: height 500ms 0ms, opacity 500ms 500ms;
+
+  ${(props) =>
+    !props.open &&
+    css`
+      transition: height 500ms 500ms, opacity 500ms 0ms;
+      opacity: 0;
+      height: 0px;
+    `}
 
   background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
