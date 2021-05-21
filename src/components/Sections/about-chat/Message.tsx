@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Bounce, MessageBubble, TypingMessageBubble } from "./styles";
+import { Bounce, MessageBubble, MessageContainer, TypingMessageBubble } from "./styles";
 
 type MessageProps = {
   message?: string;
@@ -24,40 +24,32 @@ const Message = ({
       setIsShown(true);
       setTimeout(() => {
         setShowTyping(false);
-      }, 500);
+      }, 1500);
     }, waitBeforeShow);
   }, [waitBeforeShow]);
 
-  // const TypingBubble = () => {
-  //   return (
-  //     <TypingMessageBubble last={true}>
-  //       <Bounce index={0} />
-  //       <Bounce index={1} />
-  //       <Bounce index={2} />
-  //     </TypingMessageBubble>
-  //   );
-  // };
-
   return (
-    <MessageBubble
-      last={last}
-      showTyping={showTyping}
-      isShown={isShown}
-      isRight={!right}
-    >
-      {!showTyping && (
-        <>
-          {message} {emoji}
-        </>
-      )}
-      {showTyping && (
-        <>
-          <Bounce index={0} />
-          <Bounce index={1} />
-          <Bounce index={2} />
-        </>
-      )}
-    </MessageBubble>
+    <MessageContainer isRight={!right}>
+      <MessageBubble
+        last={last}
+        showTyping={showTyping}
+        isShown={isShown}
+        isRight={!right}
+      >
+        {!showTyping && (
+          <>
+            {message} {emoji}
+          </>
+        )}
+        {showTyping && (
+          <>
+            <Bounce index={0} />
+            <Bounce index={1} />
+            <Bounce index={2} />
+          </>
+        )}
+      </MessageBubble>
+    </MessageContainer>
   );
 };
 

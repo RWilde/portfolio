@@ -49,6 +49,11 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
     }
   }, [showBurger]);
 
+  const openContactMe = () => {
+    setOpen(false);
+    setDisplayContactMe();
+  };
+
   const headerBar = () => {
     return (
       <MenuContainer open={open} showBurger={Boolean(showBurger)}>
@@ -79,7 +84,7 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         <a href="#about">About</a>
         <a href="#exp">Experience</a>
         <a href="#projects">Projects</a>
-        <a onClick={setDisplayContactMe}>Contact me</a>
+        <a onClick={openContactMe}>Contact me</a>
         <a href="../../../assets/cv.pdf">Download CV</a>
       </StyledMenu>
     );

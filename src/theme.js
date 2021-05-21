@@ -28,9 +28,6 @@ export const lightTheme = {
   toggleBorder: "#FFF",
   simpleBackground: almond,
   background: white,
-
-  // background:
-  //   "radial-gradient(circle, rgba(242,132,130,1) 23%, rgba(245,202,195,1) 100%)",
   border: almond,
   hoverBorder: green,
   simpleBackground: white,
@@ -41,7 +38,8 @@ export const lightTheme = {
   experience: experienceLight,
   projects: projectsLight,
   footer: footerLight,
-  chat: darkPink,
+  chatFrom: "#eee",
+  chatTo: darkPink,
 };
 
 export const darkTheme = {
@@ -52,8 +50,6 @@ export const darkTheme = {
   simpleBackground: darkBrown,
   background: black,
 
-  // background:
-  //   "radial-gradient(circle, rgba(10,9,8,1) 23%, rgba(34,51,59,1) 100%)",
   border: darkBrown,
   hoverBorder: lightBrown,
   simpleBackground: darkGrey,
@@ -64,5 +60,6 @@ export const darkTheme = {
   experience: experienceDark,
   projects: projectsDark,
   footer: footerDark,
-  chat: lightBrown,
+  chatTo: footerDark,
+  chatFrom: "darkgrey",
 };
