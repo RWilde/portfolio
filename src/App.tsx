@@ -20,7 +20,7 @@ import {
   ToggleFab,
 } from "./styles";
 import { CSSTransition } from "react-transition-group";
-import Chat from "./components/Sections/about-chat";
+import Landing from "./components/Sections/Landing";
 
 function App() {
   const { theme, toggleTheme, isDarkTheme } = useDarkMode();
@@ -33,8 +33,7 @@ function App() {
           <NavBar
             setDisplayContactMe={() => setDisplayContactMe(!isDisplayContactMe)}
           />
-          {/* <About /> */}
-          <Chat />
+          <Landing />
           <Seperator prevColor={theme.about} nextColor={theme.experience}>
             <Wave />
           </Seperator>

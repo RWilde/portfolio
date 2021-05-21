@@ -132,3 +132,16 @@ export const TypingMessageBubble = styled(MessageBubble)<{ last: true }>`
   width: 90px;
   text-align: center;
 `;
+
+export const WaveBackground = styled.div`
+  > svg {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+  }
+`;
+
+export const AboutContainer = styled.div`
+  height: 100vh;
+  background: ${({ theme }) => theme.about};
+`;

@@ -1,10 +1,14 @@
 import React from "react";
 import { HeaderWave } from "../..";
-import { WaveBackground, AboutContainer } from "../about/styles";
 import Message from "./Message";
-import { Container, ChatContainer } from "./styles";
+import {
+  Container,
+  ChatContainer,
+  WaveBackground,
+  AboutContainer,
+} from "./styles";
 
-const Chat = () => {
+const Landing = () => {
   return (
     <Container>
       <ChatContainer>
@@ -33,4 +37,4 @@ const Chat = () => {
     </Container>
   );
 };
-export default Chat;
+export default Landing;
