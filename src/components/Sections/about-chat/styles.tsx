@@ -26,8 +26,7 @@ export const ChatContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  height: 80%;
-
+  height: 70%;
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -53,7 +52,7 @@ export const Bounce = styled.div<{ index: number }>`
 display: none;
   width: 11px;
   height: 11px;
-  background-color: ${({theme}) => theme.text};
+  background-color: ${({ theme }) => theme.text};
   padding: 0.5em;
   border-radius: 100%;
   display: inline-block;
@@ -113,6 +112,7 @@ export const MessageBubble = styled(ChatBubble)<{
         width: 10px;
         height: 20px;
         background: ${({ theme }) => theme.about};
+        opacity: 0.8;
         border-bottom-right-radius: 10px;
       }
     `}
