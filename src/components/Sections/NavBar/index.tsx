@@ -33,8 +33,6 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
   const [showBurger, setShowBurger] = useState(false);
   const [isSmallWindow] = useWindowResize();
 
-  // useComponentRef(ref, setOpen);
-
   useScrollPosition((callbackData) => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
@@ -49,6 +47,11 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
       setOpen(false);
     }
   }, [showBurger]);
+
+  useEffect(() => {
+    open && (document.body.style.overflow = "hidden");
+    !open && (document.body.style.overflow = "unset");
+  }, [open]);
 
   const openContactMe = () => {
     setOpen(false);

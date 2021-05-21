@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import useFadeIn from "../../../hooks/useFadeIn";
 import { Job } from "../../helpers/types";
 import {
   Section,
@@ -13,9 +14,23 @@ import {
 
 const JobSection = (job: Job) => {
   const [open, setIsOpen] = useState(false);
+  // const ref = useRef<HTMLInputElement | null>(null);
+  // const [isVisible] = useFadeIn(ref);
+
+  const SectionGrid = () => {
+    return (
+      <SectionInfo open={open}>
+        <ul>
+          {job.responsibilities &&
+            job.responsibilities.length > 0 &&
+            job.responsibilities.map((item) => <li>{item}</li>)}
+        </ul>
+      </SectionInfo>
+    );
+  };
 
   return (
-    <Section open={open}>
+    <Section isVisible={true} open={open}>
       <SectionHeader>
         <SectionDivider>{job.title}</SectionDivider>
         <Text>{job.company}</Text>
@@ -32,13 +47,7 @@ const JobSection = (job: Job) => {
         </More>
         {/* <SectionDivider /> */}
       </SectionHeader>
-      <SectionInfo open={open}>
-        <ul>
-          {job.responsibilities &&
-            job.responsibilities.length > 0 &&
-            job.responsibilities.map((item) => <li>{item}</li>)}
-        </ul>
-      </SectionInfo>
+      <SectionGrid />
     </Section>
   );
 };

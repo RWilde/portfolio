@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const ExpContainer = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const ExpContainer = styled.div`
   background: ${({ theme }) => theme.experience};
 `;
 
-export const Section = styled.div<{ open?: boolean }>`
+export const Section = styled.div<{ open?: boolean; isVisible?: boolean }>`
   max-width: 1024px;
   margin: auto;
   display: grid;
@@ -16,7 +16,7 @@ export const Section = styled.div<{ open?: boolean }>`
   gap: 60px;
   padding: 0px 30px;
   justify-content: stretch;
-  transition: ${({ open }) => (open ? slideIn : slideOut)};
+  animation: ${({ isVisible }) => (isVisible ? slideIn : slideOut)};
 
   @media (max-width: 575px) {
     grid-template-columns: 1fr;
@@ -32,11 +32,74 @@ const slideOut = keyframes`
     100% { transform: translateX(-100%); }`;
 
 export const SectionHeader = styled.div``;
+  // ${({ animate }) =>
+  //   animate
+  //     ? css`
+  //         opacity: 1;
+  //         transform: translate(0, 0);
+  //         transition: all 1s;
+  //       `
+  //     : css`
+  //         opacity: 0;
+  //         transform: translate(0, 10vh);
+  //         transition: all 1s;
+  //       `}
+export const Header = styled.h1<{ animate?: boolean}>`
 
-export const Header = styled.h1``;
+`;
 
+export const slideInTop = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+`;
+
+export const slideOutTop = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+`;
+const fadeIn = keyframes`
+  from {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+`;
 export const SectionInfo = styled.div<{ open: boolean }>`
-  display: ${({ open }) => (open ? "grid" : "none")};
+  display: grid;
   max-width: 1800px;
   margin: 0px auto;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
