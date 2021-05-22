@@ -11,6 +11,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
+    "netlify-cli": "^3.30.3",
     "nodemailer": "^6.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,7 +28,7 @@
     "build": "CI= react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest",
-    "start-server": "node server.js"
+    "start-server": "netlify dev"
   },
   "eslintConfig": {
     "extends": [

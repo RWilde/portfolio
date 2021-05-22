@@ -71,7 +71,7 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         </MiddleSection>
         <RightSection>
           <NavButton title="Contact Me" onClick={setDisplayContactMe} />
-          <NavButton title="Download CV" href="/RebeccaWilde-CV.pdf" />
+          <NavButton title="Download CV" href="/CV_RebeccaWilde_web.pdf" />
         </RightSection>
       </MenuContainer>
     );
@@ -89,7 +89,7 @@ const NavBar = ({ setDisplayContactMe }: NavBarProps) => {
         <a href="#exp">Experience</a>
         <a href="#projects">Projects</a>
         <a onClick={openContactMe}>Contact me</a>
-        <a href="/RebeccaWilde-CV.pdf">Download CV</a>
+        <a href="/CV_RebeccaWilde_web.pdf">Download CV</a>
       </StyledMenu>
     );
   };

@@ -2,7 +2,6 @@ import { ExpContainer, Header } from "./styles";
 import JobSection from "./JobSection";
 import json from "../../../data.json";
 import { Job } from "../../helpers/types";
-import "animate.css/animate.min.css";
 
 const Experience = () => {
   const data = json.jobs;
