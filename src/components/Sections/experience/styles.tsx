@@ -32,21 +32,8 @@ const slideOut = keyframes`
     100% { transform: translateX(-100%); }`;
 
 export const SectionHeader = styled.div``;
-  // ${({ animate }) =>
-  //   animate
-  //     ? css`
-  //         opacity: 1;
-  //         transform: translate(0, 0);
-  //         transition: all 1s;
-  //       `
-  //     : css`
-  //         opacity: 0;
-  //         transform: translate(0, 10vh);
-  //         transition: all 1s;
-  //       `}
-export const Header = styled.h1<{ animate?: boolean}>`
 
-`;
+export const Header = styled.h1<{ animate?: boolean }>``;
 
 export const slideInTop = keyframes`
   0% {
@@ -144,7 +131,7 @@ export const Text = styled.p`
   margin: 0px 0px 20px;
   font-style: italic;
   margin: 5px;
-  text-align: justify;
+  text-align: left;
 `;
 
 export const CheckRow = styled.div`

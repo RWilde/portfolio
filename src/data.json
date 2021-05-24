@@ -51,13 +51,14 @@
   "projects": [
     {
       "name": "portfolio",
-      "technologies": ["React", "Styled Components", "Node Mailer", "Express"],
-      "about": "This!",
+      "technologies": ["React", "Styled Components", "Node Mailer", "Netlify"],
+      "about": "This! A portoflio website built using React.",
       "responsibilities": [
         "Full responsive website built using React.",
         "Utilised styled components to make the styles seamless and cohesive.",
         "Minor test implementation.",
-        "Using nodemailer and express to allow for contacting me."
+        "Using nodemailer and express to allow for contacting me.",
+        "Using Netlify to host for CI/CD"
       ]
     }
   ]

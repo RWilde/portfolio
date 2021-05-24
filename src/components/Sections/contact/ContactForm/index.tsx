@@ -58,6 +58,10 @@ const ContactForm = () => {
           }
         })
         .catch((err) => {
+          if (process.env.NODEMAILER_DEBUG) {
+            console.log(err.response.data);
+          }
+          setShowForm(false);
           setMessage(
             "Looks like something went wrong - please reach out to me via the links below :)"
           );
@@ -92,7 +96,6 @@ const ContactForm = () => {
                 required
               />
               <StyledTextArea name="message" onChange={handleChange} required />
-              {message.length > 0 && <div>{message}</div>}
               <button type="submit" onClick={(e: any) => submitEmail(e)}>
                 Send
               </button>
