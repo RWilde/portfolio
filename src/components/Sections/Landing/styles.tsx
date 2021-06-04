@@ -36,6 +36,10 @@ export const ChatContainer = styled.div`
   backdrop-filter: blur(12px);
   box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+
+  @media (min-width: 775px) {
+    width: 50%;
+  }
 `;
 
 export const ChatBubble = styled.div`

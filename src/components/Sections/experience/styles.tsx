@@ -138,7 +138,6 @@ export const CheckRow = styled.div`
   background: rgba(15, 14, 71, 0.3);
   box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
   width: auto;
-  // height: auto;
   margin: 0.5em;
   background: rgba(255, 255, 255, 0.6);
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 0px 0.5px inset;
@@ -156,6 +155,7 @@ export const Skills = styled.div`
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
 `;
 
 export const SectionDivider = styled.h2`
